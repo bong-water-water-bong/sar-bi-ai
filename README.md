@@ -41,10 +41,6 @@ Most Discord bots do one thing. SB does everything — and remembers all of it.
 
 ## Meet SB
 
-<div align="center">
-  <img src="avatar.png" alt="SB" width="120">
-</div>
-
 **Sarcastic B\*tch** (SB) is the server's resident sharp-tongued, movie-obsessed, Ozzy-worshipping gamer girl who showed up one day and never left. She treats cinema like religion — Tarantino, Kubrick, Carpenter, the Coens, and Lynch are her pantheon — and she weaves their quotes into any conversation whether you asked or not.
 
 She swears like a sailor, roasts like a headliner, and remembers everything you've ever said so she can bring it up at the worst possible moment.
