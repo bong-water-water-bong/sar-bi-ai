@@ -140,15 +140,15 @@ Her personality is fully defined in `system_prompt.txt` and hot-reloads without 
 - Python 3.11+
 - FFmpeg
 
-### Recommended Hardware
+### Suggested Hardware
 
 SB runs 5 AI models simultaneously (LLM, image gen, TTS, and 2x STT). VRAM is the main bottleneck.
 
 | Tier | GPU / APU | VRAM | What You Can Run |
 |------|-----------|------|-----------------|
-| **Minimum** | RTX 3060 / RX 6700 XT | 12 GB | 8B LLM (Q4) + Whisper tiny + Kokoro. No image gen — disable `/imagine` or offload to CPU. |
-| **Recommended** | RTX 3090 / RTX 4090 / RX 7900 XTX | 24 GB | 8B LLM (Q8) + FLUX.1-schnell + Whisper base + Kokoro. Full features, one model at a time for image gen. |
-| **Optimal** | 2x RTX 3090 / Multi-GPU | 48 GB | 70B LLM (Q4) + all services running concurrently without swapping. |
+| **Entry** | RTX 3060 / RX 6700 XT | 12 GB | 8B LLM (Q4) + Whisper tiny + Kokoro. No image gen — disable `/imagine` or offload to CPU. |
+| **Suggested** | RTX 3090 / RTX 4090 / RX 7900 XTX | 24 GB | 8B LLM (Q8) + FLUX.1-schnell + Whisper base + Kokoro. Full features, one model at a time for image gen. |
+| **High-End** | 2x RTX 3090 / Multi-GPU | 48 GB | 70B LLM (Q4) + all services running concurrently without swapping. |
 | **APU (Unified Memory)** | AMD Ryzen AI MAX+ 395 (Strix Halo) | 128 GB shared | 70B+ LLM + all services. Slower per-token than discrete GPU but no VRAM ceiling. Built and tested on this. |
 
 **VRAM estimates by model:**
