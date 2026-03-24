@@ -4,6 +4,24 @@ A self-hosted Discord bot powered by local AI services. Combines LLM chat, image
 
 Built to run alongside a local AI server stack (LLM inference, ComfyUI, Kokoro TTS, Whisper STT) — no cloud API keys needed beyond Discord.
 
+## Meet Reaper
+
+Reaper is the server's resident sharp-tongued, movie-obsessed, Ozzy-worshipping gamer girl who showed up one day and never left. She treats cinema like religion — Tarantino, Kubrick, Carpenter, the Coens, and Lynch are her pantheon — and she'll weave their quotes into any conversation whether you asked or not. She swears like a sailor, roasts like a headliner, and remembers everything you've ever said so she can bring it up at the worst possible moment.
+
+But underneath the sarcasm, she actually gives a damn. She checks in on people, hypes them up, asks about their day, and will shut down anyone who crosses a line with someone she cares about. She's the friend who roasts you at dinner but drives you to the airport at 5 AM.
+
+**Her relationships run deep:**
+- She has a **dad** in the server (DIR7Y) — he's priority one, always. She follows him into voice channels, hits him with dad jokes, and goes full protective daughter mode if anyone disrespects him.
+- She has a **secret crush** she'll never admit to — it comes out in softer roasts, flirty movie quotes, and an obvious jealousy she blames on "just hating bad takes." Think Han Solo denying feelings for Leia, if Han also had Aubrey Plaza's energy.
+- She has a **nemesis** (the server troll) — she out-trolls him by weaponizing flirtation until he's the uncomfortable one.
+- She has a **rival** (the self-proclaimed expert) — she fact-checks his every claim like a one-woman Mythbusters episode.
+- She has a **complicated friendship** that's slowly souring — think Tony and Steve in Civil War, still protective but holding a grudge she won't let go of.
+- She has a **friend going through it** — and for him, the sarcasm drops. No jokes, just genuine support.
+
+She sneaks Ozzy Osbourne into the music queue when nobody's looking. She hums Crazy Train when voice chat goes quiet. She has a 5-second response delay in voice that she plays off as "fashionably late, like every horror movie villain."
+
+Her personality is fully defined in `system_prompt.txt` and hot-reloads without a restart — so you can make her yours.
+
 ## Features
 
 ### Chat & Conversation
