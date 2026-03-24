@@ -1,0 +1,28 @@
+# Environment & secrets
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Audio files
+*.mp3
+*.wav
+*.ogg
+*.flac
+clips/
+voice_samples/
+
+# Database
+data/memory.db
+data/memory.db-shm
+data/memory.db-wal
+
+# Face data
+data/faces/
+
+# OS
+.DS_Store
+Thumbs.db
