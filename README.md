@@ -66,6 +66,18 @@ The bot connects to these services over HTTP (default localhost addresses):
 | Kokoro TTS | `http://127.0.0.1:8880` | Text-to-speech (OpenAI-compatible `/v1/audio/speech`) |
 | Whisper STT | `http://127.0.0.1:9000` | Speech-to-text (OpenAI-compatible `/v1/audio/transcriptions`) |
 
+### Default Models
+
+| Component | Default Model | Notes |
+|-----------|--------------|-------|
+| LLM | `dolphin-2.9.4-llama3.1-8b-Q4_K_M.gguf` | Uncensored Dolphin (Eric Hartford). No refusals, follows the system prompt personality without filtering. Any OpenAI-compatible model works — set via `LLM_MODEL` in `.env` |
+| Image Gen | `flux1-schnell.safetensors` | FLUX.1-schnell (Black Forest Labs). Fast 4-step generation. Requires `ae.safetensors` VAE, `t5xxl_fp16.safetensors` and `clip_l.safetensors` CLIP models in ComfyUI |
+| TTS | `kokoro` | Kokoro TTS with configurable voice (default `af_nova`). Set voice via `TTS_VOICE` in `.env` |
+| STT (Chat) | `Systran/faster-whisper-base.en` | Faster-Whisper base model for text channel voice messages |
+| STT (Voice) | `Systran/faster-whisper-tiny.en` | Faster-Whisper tiny model for real-time voice chat (lower latency) |
+
+> **Why Dolphin?** The bot's personality is R-rated by design — it swears, roasts, flirts, and never breaks character. Standard censored models will constantly refuse or sanitize responses, breaking the experience. Dolphin is purpose-built for unrestricted instruction-following.
+
 ### System Dependencies
 
 - **Python 3.11+**
