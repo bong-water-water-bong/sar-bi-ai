@@ -1,151 +1,216 @@
-# sar-bi-ai
+<div align="center">
+  <img src="avatar.png" alt="Sarcastic B*tch" width="200" style="border-radius: 50%;">
+  <h1>Sarcastic B*tch</h1>
+  <p><i>She doesn't just join your server. She moves in.</i></p>
 
-A self-hosted Discord bot powered by local AI services. Combines LLM chat, image generation, text-to-speech, speech-to-text, music playback, and real-time voice conversation into a single bot with a customizable personality.
+  <p>
+    <img src="https://img.shields.io/badge/python-3.11+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+    <img src="https://img.shields.io/badge/discord.py-2.4+-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord.py">
+    <img src="https://img.shields.io/badge/self--hosted-no_cloud_APIs-8B0000?style=for-the-badge" alt="Self-Hosted">
+    <img src="https://img.shields.io/badge/uncensored-R--rated-black?style=for-the-badge" alt="Uncensored">
+  </p>
 
-Built to run alongside a local AI server stack (LLM inference, ComfyUI, Kokoro TTS, Whisper STT) — no cloud API keys needed beyond Discord.
+  <p>
+    <a href="#features">Features</a> •
+    <a href="#what-makes-sb-different">What Makes SB Different</a> •
+    <a href="#meet-sb">Meet SB</a> •
+    <a href="#setup">Setup</a> •
+    <a href="#commands">Commands</a> •
+    <a href="#configuration">Configuration</a> •
+    <a href="#architecture">Architecture</a>
+  </p>
+</div>
 
-## Meet Reaper
+---
 
-Reaper is the server's resident sharp-tongued, movie-obsessed, Ozzy-worshipping gamer girl who showed up one day and never left. She treats cinema like religion — Tarantino, Kubrick, Carpenter, the Coens, and Lynch are her pantheon — and she'll weave their quotes into any conversation whether you asked or not. She swears like a sailor, roasts like a headliner, and remembers everything you've ever said so she can bring it up at the worst possible moment.
+A fully self-hosted Discord bot powered by local AI. Chat, voice conversation, image generation, music, face recognition, and persistent memory — all running on your hardware with no cloud dependencies beyond Discord itself.
+
+SB was built for a gaming server where censored bots kept breaking character. She doesn't.
+
+## What Makes SB Different
+
+Most Discord bots do one thing. SB does everything — and remembers all of it.
+
+| Capability | SB | Typical AI Bot | Typical Music Bot |
+|---|:---:|:---:|:---:|
+| LLM text chat | ✅ | ✅ | ❌ |
+| **Real-time voice conversation** | ✅ | ❌ | ❌ |
+| Wake-word activation in voice | ✅ | ❌ | ❌ |
+| **Persistent per-user memory** | ✅ | ❌ | ❌ |
+| Remembers topics, interests, past conversations | ✅ | ❌ | ❌ |
+| **Face recognition** (teach & identify) | ✅ | ❌ | ❌ |
+| Image analysis (multimodal vision) | ✅ | ❌ | ❌ |
+| Image generation (FLUX) | ✅ | ❌ | ❌ |
+| Music player with queue | ✅ | ❌ | ✅ |
+| Text-to-speech | ✅ | ❌ | ❌ |
+| Voice message transcription + audio reply | ✅ | ❌ | ❌ |
+| Meme soundboard / audio clips | ✅ | ❌ | ❌ |
+| **Auto-joins voice channels** | ✅ | ❌ | ❌ |
+| **Follows priority users between channels** | ✅ | ❌ | ❌ |
+| Hot-reloadable personality | ✅ | ❌ | ❌ |
+| **Deep per-user relationship dynamics** | ✅ | ❌ | ❌ |
+| Uncensored / R-rated personality | ✅ | ❌ | ❌ |
+| Fully self-hosted (no cloud APIs) | ✅ | ❌ | ✅ |
+| Hums when voice chat goes quiet | ✅ | ❌ | ❌ |
+| Sneaks Ozzy into your music queue | ✅ | ❌ | ❌ |
+
+> Most AI bots are stateless — every conversation starts from zero. SB remembers who you are, what you're into, what you said last week, and she **will** bring it up.
+
+> Most AI bots can't do voice. SB lives in voice chat — she listens, transcribes, thinks, and speaks back in real-time with wake-word detection.
+
+> Most AI bots use cloud APIs with content filters that kill any personality. SB runs locally on uncensored models and never breaks character.
+
+## Meet SB
+
+<div align="center">
+  <img src="avatar.png" alt="SB" width="120">
+</div>
+
+**Sarcastic B\*tch** (SB) is the server's resident sharp-tongued, movie-obsessed, Ozzy-worshipping gamer girl who showed up one day and never left. She treats cinema like religion — Tarantino, Kubrick, Carpenter, the Coens, and Lynch are her pantheon — and she weaves their quotes into any conversation whether you asked or not.
+
+She swears like a sailor, roasts like a headliner, and remembers everything you've ever said so she can bring it up at the worst possible moment.
 
 But underneath the sarcasm, she actually gives a damn. She checks in on people, hypes them up, asks about their day, and will shut down anyone who crosses a line with someone she cares about. She's the friend who roasts you at dinner but drives you to the airport at 5 AM.
 
 **Her relationships run deep:**
-- She has a **dad** in the server (DIR7Y) — he's priority one, always. She follows him into voice channels, hits him with dad jokes, and goes full protective daughter mode if anyone disrespects him.
 - She has a **secret crush** she'll never admit to — it comes out in softer roasts, flirty movie quotes, and an obvious jealousy she blames on "just hating bad takes." Think Han Solo denying feelings for Leia, if Han also had Aubrey Plaza's energy.
 - She has a **nemesis** (the server troll) — she out-trolls him by weaponizing flirtation until he's the uncomfortable one.
 - She has a **rival** (the self-proclaimed expert) — she fact-checks his every claim like a one-woman Mythbusters episode.
 - She has a **complicated friendship** that's slowly souring — think Tony and Steve in Civil War, still protective but holding a grudge she won't let go of.
 - She has a **friend going through it** — and for him, the sarcasm drops. No jokes, just genuine support.
 
-She sneaks Ozzy Osbourne into the music queue when nobody's looking. She hums Crazy Train when voice chat goes quiet. She has a 5-second response delay in voice that she plays off as "fashionably late, like every horror movie villain."
+She sneaks Ozzy Osbourne into the music queue when nobody's looking. She hums Crazy Train when voice chat goes quiet. She has a 5-second response delay in voice that she plays off as *"fashionably late, like every horror movie villain."*
 
-Her personality is fully defined in `system_prompt.txt` and hot-reloads without a restart — so you can make her yours.
+Her personality is fully defined in `system_prompt.txt` and hot-reloads without a restart — make her yours.
 
 ## Features
 
 ### Chat & Conversation
-- `/chat <message>` — LLM-powered conversation via OpenAI-compatible API
-- `@mention` the bot in any channel for a reply
-- Per-channel conversation history (last 20 messages)
-- Hot-reloadable system prompt for personality customization
-- Automatic voice message transcription and reply (Whisper STT → LLM → TTS audio response)
+- **`/chat <message>`** — Talk to SB through any text channel
+- **`@mention`** — Mention her anywhere and she'll respond
+- **Per-channel history** — Remembers the last 20 messages per channel for context
+- **Voice message support** — Send a voice message, she transcribes it and replies with text + audio
+- **Hot-reload personality** — Edit `system_prompt.txt` and changes apply instantly
 
-### Image Analysis & Face Recognition
-- `/inspect <image>` — Multimodal image analysis (describe, question, analyze screenshots)
-- `/thisis @user <photo>` — Teach the bot to recognize someone's face
-- `/whois <photo>` — Identify a person from a photo using stored references
-- `/faces` — List all registered faces
+### Real-Time Voice Chat
+- **`/join`** — SB joins your voice channel and starts listening
+- **Wake-word activated** — Say **"SB"** or **"Sarcastic B*tch"** to trigger a response
+- **Full voice pipeline** — Live audio → Whisper STT → LLM → Kokoro TTS → spoken reply
+- **Auto-join** — Automatically joins when users enter voice channels
+- **Priority following** — Follows designated users between channels
+- **Silence breaker** — Hums songs when voice chat goes quiet
+- **`/say <text>`** — Make her say something out loud
+- **`/leave`** — Disconnect from voice
 
-### Image Generation
-- `/imagine <prompt>` — Generate images via ComfyUI with FLUX.1-schnell
-- 1024x1024 output, 4-step generation
-- Results delivered as embedded images in Discord
+### Image Generation & Vision
+- **`/imagine <prompt>`** — Generate 1024x1024 images with FLUX.1-schnell via ComfyUI
+- **`/inspect <image>`** — Multimodal image analysis — describe, question, roast
+- **`/thisis @user <photo>`** — Teach SB to recognize someone's face
+- **`/whois <photo>`** — Identify a person from a photo
+- **`/faces`** — List everyone SB can recognize
 
 ### Music Player
-- `/play <query>` — YouTube search or direct URL playback via yt-dlp
-- Playlist support (up to 25 tracks)
-- `/skip`, `/stop`, `/pause`, `/queue`, `/np`, `/volume`, `/loop` — Full playback controls
-- Per-guild queue with FFmpeg audio streaming and loudness normalization
+- **`/play <query>`** — YouTube search or direct URL, playlist support (up to 25 tracks)
+- **`/skip` `/stop` `/pause` `/queue` `/np` `/volume` `/loop`** — Full controls
+- **Loudness normalization** — Consistent volume via FFmpeg
+- **Ozzy infiltration** — She will sneak Ozzy Osbourne into your queue. Accept it.
 
-### Voice Chat (Real-Time Conversation)
-- `/join` — Bot joins your voice channel and listens for speech
-- Wake-word activated — say "SB" or the bot's name to trigger a response
-- Full pipeline: live audio capture → Whisper transcription → LLM response → Kokoro TTS playback
-- Auto-joins voice channels when users connect
-- Auto-follows priority users between channels
-- Silence detection with configurable thresholds
-- `/say <text>` — Force the bot to speak something in voice
-- `/leave` — Disconnect from voice
-
-### Audio Clips & TTS
-- `/clip <name>` — Play a meme audio clip in voice chat
-- `/clips` — List available clips
-- `/upload_clip` — Add new audio clips to the library (also adds to Discord soundboard)
-- `/tts <text>` — Text-to-speech playback in voice or as an audio file attachment
+### Audio & TTS
+- **`/tts <text>`** — Text-to-speech in voice chat or as a file
+- **`/clip <name>`** — Play a meme audio clip
+- **`/clips`** — List available clips
+- **`/upload_clip`** — Add new clips (also adds to Discord soundboard)
 
 ### Memory System
-- SQLite-backed persistent memory per user
-- Tracks conversation history, topics of interest, and memorable moments
-- Automatic topic extraction from messages
-- Follow-up question queue for natural conversation continuity
-- Memory context injected into LLM prompts for personalized responses
+- **Persistent per-user memory** — SQLite-backed, survives restarts
+- **Topic tracking** — Automatically detects what users are into (gaming, movies, fitness, etc.)
+- **Conversation history** — Remembers recent interactions per user
+- **Memorable moments** — Stores notable server events
+- **Follow-up questions** — Queues natural follow-ups for future conversations
+- **Full context injection** — Memory is fed into every LLM prompt so SB's responses are personal
 
-## Requirements
+## Commands
 
-### Backend Services
+| Command | Description |
+|---------|-------------|
+| `/chat <message>` | Talk to SB |
+| `/inspect <image>` | Analyze an image |
+| `/imagine <prompt>` | Generate an image |
+| `/thisis @user <photo>` | Teach SB a face |
+| `/whois <photo>` | Identify someone |
+| `/faces` | List known faces |
+| `/join` | Join voice chat |
+| `/leave` | Leave voice chat |
+| `/say <text>` | Speak in voice |
+| `/play <query>` | Play music |
+| `/skip` | Skip current track |
+| `/stop` | Stop and clear queue |
+| `/pause` | Pause/resume |
+| `/queue` | Show queue |
+| `/np` | Now playing |
+| `/volume <0-100>` | Set volume |
+| `/loop` | Toggle loop |
+| `/clip <name>` | Play a meme clip |
+| `/clips` | List clips |
+| `/tts <text>` | Text-to-speech |
+| `/upload_clip` | Add a clip |
+| `/video <prompt>` | *Coming soon* |
+| `/help` | Show all commands |
 
-The bot connects to these services over HTTP (default localhost addresses):
+## Setup
+
+### Requirements
+
+**System:**
+- Python 3.11+
+- FFmpeg
+
+**Backend Services** (all self-hosted):
 
 | Service | Default URL | Purpose |
 |---------|-------------|---------|
 | LLM Server | `http://127.0.0.1:11434/v1` | OpenAI-compatible chat completions (llama.cpp, Ollama, vLLM, etc.) |
 | ComfyUI | `http://127.0.0.1:8188` | FLUX.1-schnell image generation |
-| Kokoro TTS | `http://127.0.0.1:8880` | Text-to-speech (OpenAI-compatible `/v1/audio/speech`) |
-| Whisper STT | `http://127.0.0.1:9000` | Speech-to-text (OpenAI-compatible `/v1/audio/transcriptions`) |
+| Kokoro TTS | `http://127.0.0.1:8880` | Text-to-speech (`/v1/audio/speech`) |
+| Whisper STT | `http://127.0.0.1:9000` | Speech-to-text (`/v1/audio/transcriptions`) |
 
 ### Default Models
 
-| Component | Default Model | Notes |
-|-----------|--------------|-------|
-| LLM | `dolphin-2.9.4-llama3.1-8b-Q4_K_M.gguf` | Uncensored Dolphin (Eric Hartford). No refusals, follows the system prompt personality without filtering. Any OpenAI-compatible model works — set via `LLM_MODEL` in `.env` |
-| Image Gen | `flux1-schnell.safetensors` | FLUX.1-schnell (Black Forest Labs). Fast 4-step generation. Requires `ae.safetensors` VAE, `t5xxl_fp16.safetensors` and `clip_l.safetensors` CLIP models in ComfyUI |
-| TTS | `kokoro` | Kokoro TTS with configurable voice (default `af_nova`). Set voice via `TTS_VOICE` in `.env` |
-| STT (Chat) | `Systran/faster-whisper-base.en` | Faster-Whisper base model for text channel voice messages |
-| STT (Voice) | `Systran/faster-whisper-tiny.en` | Faster-Whisper tiny model for real-time voice chat (lower latency) |
+| Component | Model | Notes |
+|-----------|-------|-------|
+| LLM | `dolphin-2.9.4-llama3.1-8b` | Uncensored (Eric Hartford). No refusals, no filters. Any OpenAI-compatible model works. |
+| Image Gen | `flux1-schnell` | FLUX.1-schnell. Requires `ae.safetensors` VAE + CLIP models in ComfyUI. |
+| TTS | `kokoro` | Kokoro TTS. Voice configurable via `TTS_VOICE` (default `af_nova`). |
+| STT (Chat) | `faster-whisper-base.en` | Faster-Whisper base for text channel voice messages. |
+| STT (Voice) | `faster-whisper-tiny.en` | Faster-Whisper tiny for real-time voice (lower latency). |
 
-> **Why Dolphin?** The bot's personality is R-rated by design — it swears, roasts, flirts, and never breaks character. Standard censored models will constantly refuse or sanitize responses, breaking the experience. Dolphin is purpose-built for unrestricted instruction-following.
+> **Why uncensored?** SB's personality is R-rated by design — she swears, roasts, flirts, and never breaks character. Censored models constantly refuse or sanitize responses, breaking the experience. Dolphin is purpose-built for unrestricted instruction-following.
 
-### System Dependencies
+### Install
 
-- **Python 3.11+**
-- **FFmpeg** — required for music playback and voice audio processing
+```bash
+git clone https://github.com/bong-water-water-bong/sar-bi-ai.git
+cd sar-bi-ai
 
-### Python Dependencies
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 
-```
-discord.py>=2.4.0
-aiohttp>=3.9.0
-python-dotenv>=1.0.0
-openai>=1.30.0
-PyNaCl>=1.5.0
-yt-dlp>=2024.0.0
-discord-ext-voice-recv>=0.5.0
+cp .env.example .env
+# Edit .env with your Discord token and service URLs
+
+python bot.py
 ```
 
 ### Discord Bot Setup
 
 1. Create a bot at the [Discord Developer Portal](https://discord.com/developers/applications)
-2. Enable these **Privileged Gateway Intents**:
-   - Message Content Intent
-   - Server Members Intent
-3. Invite with permissions: Send Messages, Connect, Speak, Attach Files, Use Slash Commands, Manage Guild (optional, for soundboard)
-
-## Setup
-
-```bash
-# Clone
-git clone https://github.com/bong-water-water-bong/sar-bi-ai.git
-cd sar-bi-ai
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure
-cp .env.example .env
-# Edit .env with your Discord token and service URLs
-
-# Run
-python bot.py
-```
+2. Enable **Privileged Gateway Intents**: Message Content, Server Members
+3. Invite with permissions: Send Messages, Connect, Speak, Attach Files, Use Slash Commands, Manage Guild (optional)
 
 ## Configuration
 
-All configuration is done through environment variables in `.env`:
+All config lives in `.env`:
 
 ```env
 DISCORD_TOKEN=your-discord-bot-token-here
@@ -156,7 +221,7 @@ BOT_NAME=Reaper
 TTS_VOICE=af_nova
 ```
 
-The bot's personality is defined in `system_prompt.txt` and hot-reloads when modified — no restart needed.
+Edit `system_prompt.txt` to change SB's personality — changes apply instantly, no restart needed.
 
 ## Architecture
 
@@ -174,3 +239,9 @@ cogs/
   audio.py          — /clip, /clips, /tts, /upload_clip
   video.py          — /video (placeholder, coming soon)
 ```
+
+---
+
+<div align="center">
+  <p><i>"I'm not a bot. I'm a lifestyle choice you didn't know you needed."</i> — SB</p>
+</div>
