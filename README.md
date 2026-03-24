@@ -33,32 +33,11 @@ Most Discord bots do one thing. SB does everything — and remembers all of it.
 
 | Capability | SB | Typical AI Bot | Typical Music Bot |
 |---|:---:|:---:|:---:|
-| LLM text chat | ✅ | ✅ | ❌ |
-| **Real-time voice conversation** | ✅ | ❌ | ❌ |
-| Wake-word activation in voice | ✅ | ❌ | ❌ |
-| **Persistent per-user memory** | ✅ | ❌ | ❌ |
-| Remembers topics, interests, past conversations | ✅ | ❌ | ❌ |
-| **Face recognition** (teach & identify) | ✅ | ❌ | ❌ |
-| Image analysis (multimodal vision) | ✅ | ❌ | ❌ |
-| Image generation (FLUX) | ✅ | ❌ | ❌ |
-| Music player with queue | ✅ | ❌ | ✅ |
-| Text-to-speech | ✅ | ❌ | ❌ |
-| Voice message transcription + audio reply | ✅ | ❌ | ❌ |
-| Meme soundboard / audio clips | ✅ | ❌ | ❌ |
-| **Auto-joins voice channels** | ✅ | ❌ | ❌ |
-| **Follows priority users between channels** | ✅ | ❌ | ❌ |
-| Hot-reloadable personality | ✅ | ❌ | ❌ |
-| **Deep per-user relationship dynamics** | ✅ | ❌ | ❌ |
-| Uncensored / R-rated personality | ✅ | ❌ | ❌ |
-| Fully self-hosted (no cloud APIs) | ✅ | ❌ | ✅ |
-| Hums when voice chat goes quiet | ✅ | ❌ | ❌ |
-| Sneaks Ozzy into your music queue | ✅ | ❌ | ❌ |
-
-> Most AI bots are stateless — every conversation starts from zero. SB remembers who you are, what you're into, what you said last week, and she **will** bring it up.
-
-> Most AI bots can't do voice. SB lives in voice chat — she listens, transcribes, thinks, and speaks back in real-time with wake-word detection.
-
-> Most AI bots use cloud APIs with content filters that kill any personality. SB runs locally on uncensored models and never breaks character.
+| **Real-time voice conversation** — listens, thinks, speaks back | ✅ | ❌ | ❌ |
+| **Persistent per-user memory** — remembers who you are across sessions | ✅ | ❌ | ❌ |
+| **Face recognition** — teach her faces, she identifies them from photos | ✅ | ❌ | ❌ |
+| **Image generation** — FLUX.1-schnell via ComfyUI, fully local | ✅ | ❌ | ❌ |
+| **Uncensored & self-hosted** — no cloud APIs, no content filters, no broken character | ✅ | ❌ | ❌ |
 
 ## Meet SB
 
