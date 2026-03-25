@@ -431,7 +431,7 @@ class VoiceChatCog(commands.Cog):
                 log.info(f"Transcribed from {user_name}: {text}")
 
                 # Users who can talk without saying the trigger word
-                ALWAYS_RESPOND_TO = {<DISCORD_USER_ID>}  # <DISCORD_USER_3>
+                ALWAYS_RESPOND_TO = set()  # Add Discord user IDs here (e.g., {123456789012345678})
 
                 # Only respond when called by name — unless whitelisted
                 text_lower = text.lower()
