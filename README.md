@@ -189,7 +189,7 @@ SB runs 5 AI models simultaneously (LLM, image gen, TTS, and 2x STT). VRAM is th
 ### Install
 
 ```bash
-git clone https://github.com/bong-water-water-bong/sar-bi-ai.git
+git clone https://github.com/<GITHUB_ORG>/sar-bi-ai.git
 cd sar-bi-ai
 
 python -m venv venv

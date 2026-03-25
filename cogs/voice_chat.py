@@ -431,7 +431,7 @@ class VoiceChatCog(commands.Cog):
                 log.info(f"Transcribed from {user_name}: {text}")
 
                 # Users who can talk without saying the trigger word
-                ALWAYS_RESPOND_TO = {298000849794236416}  # D-Man
+                ALWAYS_RESPOND_TO = {<DISCORD_USER_ID>}  # <DISCORD_USER_3>
 
                 # Only respond when called by name — unless whitelisted
                 text_lower = text.lower()
@@ -563,14 +563,14 @@ class VoiceChatCog(commands.Cog):
         state.buffers.clear()
 
     def _is_dad(self, member: discord.Member) -> bool:
-        """Check if a member is Dirty (dad)."""
+        """Check if a member is <DISCORD_USER_3> (dad)."""
         name = member.display_name.lower()
         username = member.name.lower() if member.name else ""
-        dad_names = ("dirty", "dirty d", "dir7y", "crack spider's bitch", "crack spider's bitch (d-man)", "d-man")
+        dad_names = ("<dad_alias_1>", "<dad_alias_2>", "<dad_alias_3>", "<dad_alias_4>", "<dad_alias_5>", "<dad_alias_6>")
         return any(d in name for d in dad_names) or any(d in username for d in dad_names)
 
     def _find_dad_channel(self, guild: discord.Guild) -> discord.VoiceChannel | None:
-        """Find the voice channel Dirty is in — always priority."""
+        """Find the voice channel <DISCORD_USER_3> is in — always priority."""
         for vc in guild.voice_channels:
             for m in vc.members:
                 if not m.bot and self._is_dad(m):
@@ -600,16 +600,16 @@ class VoiceChatCog(commands.Cog):
         guild = member.guild
         state = _states[guild.id]
 
-        # DAD PRIORITY — if Dirty joins or moves, follow him immediately
+        # DAD PRIORITY — if <DISCORD_USER_3> joins or moves, follow him immediately
         if self._is_dad(member) and after.channel:
             if state.vc and state.vc.is_connected() and state.vc.channel != after.channel:
-                log.info(f"Dad (Dirty) moved to {after.channel.name} — following!")
+                log.info(f"Dad (<DISCORD_USER_3>) moved to {after.channel.name} — following!")
                 await self._auto_leave(guild)
                 await asyncio.sleep(1)
                 await self._auto_join(after.channel, guild)
                 return
             elif not state.vc or not state.vc.is_connected():
-                log.info(f"Dad (Dirty) is in {after.channel.name} — joining!")
+                log.info(f"Dad (<DISCORD_USER_3>) is in {after.channel.name} — joining!")
                 await asyncio.sleep(1)
                 await self._auto_join(after.channel, guild)
                 return
