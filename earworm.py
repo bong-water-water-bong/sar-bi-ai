@@ -13,7 +13,7 @@ from discord.ext import commands
 
 log = logging.getLogger("earworm")
 
-EARWORM_DIR = Path("/home/bcloud/discord-bot/clips/earworms")
+EARWORM_DIR = Path("/home/<YOUR_USER>/discord-bot/clips/earworms")
 EARWORM_DIR.mkdir(parents=True, exist_ok=True)
 
 # Earworm songs — short catchy hooks that get stuck in your head
@@ -103,7 +103,7 @@ HUMMING_PATTERNS = {
     "nyan_cat": "Mm mm mm mm mm mmm mm, mm mm mm mm mm mmm mm, mm mm mm mm mm mmm mm mm",
 }
 
-HUMMING_DIR = Path("/home/bcloud/discord-bot/clips/earworms/hummed")
+HUMMING_DIR = Path("/home/<YOUR_USER>/discord-bot/clips/earworms/hummed")
 HUMMING_DIR.mkdir(parents=True, exist_ok=True)
 
 

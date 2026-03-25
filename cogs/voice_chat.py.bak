@@ -114,7 +114,7 @@ _states: dict[int, GuildVoiceState] = defaultdict(GuildVoiceState)
 from pathlib import Path as _Path
 
 Path = _Path
-_PROMPT_PATH = Path("/home/bcloud/discord-bot/system_prompt.txt")
+_PROMPT_PATH = Path("/home/<YOUR_USER>/discord-bot/system_prompt.txt")
 _prompt_cache = {"text": _PROMPT_PATH.read_text(), "mtime": _PROMPT_PATH.stat().st_mtime}
 
 
